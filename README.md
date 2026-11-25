@@ -1,175 +1,161 @@
-{
- "cells": [
-  {
-   "cell_type": "markdown",
-   "id": "a31037ef-9543-4096-99dd-e47ae7236fa3",
-   "metadata": {},
-   "source": [
-    "# 🚢 Titanic Dataset – Exploratory Data Analysis (EDA)\n",
-    "\n",
-    "<p align=\"center\">\n",
-    "  <strong>SWYNEX Data Analytics Internship Project</strong>\n",
-    "</p>\n",
-    "\n",
-    "<p align=\"center\">\n",
-    "  <img src=\"https://img.shields.io/badge/Python-Data%20Analysis-blue?logo=python\" />\n",
-    "  <img src=\"https://img.shields.io/badge/Pandas-EDA-150458?logo=pandas\" />\n",
-    "  <img src=\"https://img.shields.io/badge/Seaborn-Visualization-green\" />\n",
-    "  <img src=\"https://img.shields.io/badge/Status-Completed-success\" />\n",
-    "</p>\n",
-    "\n",
-    "## 📌 Project Overview\n",
-    "\n",
-    "This project focuses on performing Exploratory Data Analysis (EDA) on the Titanic passenger dataset.\n",
-    "\n",
-    "The main objective is to explore passenger information, identify survival patterns, understand relationships between variables, and detect anomalies using Python data analysis and visualization libraries.\n",
-    "\n",
-    "## 🎯 Objectives\n",
-    "\n",
-    "- Understand the Titanic dataset.\n",
-    "- Perform data exploration and analysis.\n",
-    "- Identify missing values and anomalies.\n",
-    "- Analyze passenger survival patterns.\n",
-    "- Visualize relationships between different attributes.\n",
-    "- Extract meaningful insights from the dataset.\n",
-    "\n",
-    "## 📂 Dataset Information\n",
-    "\n",
-    "| Details | Description |\n",
-    "|---|---|\n",
-    "| Dataset | Titanic Dataset |\n",
-    "| Total Records | 891 passengers |\n",
-    "| Total Columns | 13 |\n",
-    "| Target Variable | Survived |\n",
-    "| File | titanic_cleaned.csv |\n",
-    "\n",
-    "## 🛠️ Technologies Used\n",
-    "\n",
-    "- **Python** – Programming language\n",
-    "- **Pandas** – Data manipulation and analysis\n",
-    "- **NumPy** – Numerical operations\n",
-    "- **Matplotlib** – Data visualization\n",
-    "- **Seaborn** – Statistical visualization\n",
-    "- **Jupyter Notebook** – Development environment\n",
-    "\n",
-    "## 📊 Data Visualizations\n",
-    "\n",
-    "The following visualizations were created to understand passenger survival patterns.\n",
-    "\n",
-    "### 1. Survival Analysis\n",
-    "![Survival](images/1_survival.png)\n",
-    "\n",
-    "### 2. Gender-Based Survival\n",
-    "![Gender](images/2_gender.png)\n",
-    "\n",
-    "### 3. Passenger Class Analysis\n",
-    "![Class](images/3_class.png)\n",
-    "\n",
-    "### 4. Age Distribution\n",
-    "![Age](images/4_age.png)\n",
-    "\n",
-    "### 5. Fare Outlier Detection\n",
-    "![Fare](images/5_fare_outliers.png)\n",
-    "\n",
-    "### 6. Correlation Heatmap\n",
-    "![Heatmap](images/6_heatmap.png)\n",
-    "\n",
-    "### 7. Family Size Analysis\n",
-    "![Family](images/7_family.png)\n",
-    "\n",
-    "## 🔍 Key Insights\n",
-    "\n",
-    "| Factor | Key Finding |\n",
-    "|---|---|\n",
-    "| Passenger Class | First class: 63.0%, Third class: 24.2% survival |\n",
-    "| Gender | Women: 74.2%, Men: 18.9% survival |\n",
-    "| Family Size | Families of 2–4 had better survival rates |\n",
-    "| Fare | 116 high-fare outliers were identified |\n",
-    "| Age | Young children showed better survival chances |\n",
-    "| Correlation | Survival correlated negatively with Pclass (-0.34) and positively with Fare (+0.26) |\n",
-    "\n",
-    "## 💡 Conclusion\n",
-    "\n",
-    "The analysis reveals that gender, passenger class, age, family size, and ticket fare were important factors associated with Titanic passenger survival.\n",
-    "\n",
-    "Data visualization helped identify meaningful patterns, relationships, and anomalies in the dataset.\n",
-    "\n",
-    "This project provided practical experience in Python, data cleaning, exploratory data analysis, and data visualization.\n",
-    "\n",
-    "## ▶️ How to Run the Project\n",
-    "\n",
-    "**Step 1:** Install the required libraries.\n",
-    "\n",
-    "```bash\n",
-    "py -m pip install pandas numpy matplotlib seaborn notebook\n",
-    "```\n",
-    "\n",
-    "**Step 2:** Open the project folder.\n",
-    "\n",
-    "**Step 3:** Launch Jupyter Notebook.\n",
-    "\n",
-    "```bash\n",
-    "jupyter notebook\n",
-    "```\n",
-    "\n",
-    "**Step 4:** Open `eda.ipynb` and run all cells.\n",
-    "\n",
-    "## 📁 Project Structure\n",
-    "\n",
-    "```text\n",
-    "SWYNEX-Exploratory-Data-Analysis/\n",
-    "│\n",
-    "├── README.md\n",
-    "├── eda.ipynb\n",
-    "│\n",
-    "├── data/\n",
-    "│   └── titanic_cleaned.csv\n",
-    "│\n",
-    "└── images/\n",
-    "    ├── 1_survival.png\n",
-    "    ├── 2_gender.png\n",
-    "    ├── 3_class.png\n",
-    "    ├── 4_age.png\n",
-    "    ├── 5_fare_outliers.png\n",
-    "    ├── 6_heatmap.png\n",
-    "    └── 7_family.png\n",
-    "```\n",
-    "\n",
-    "---\n",
-    "\n",
-    "<p align=\"center\">\n",
-    "  <strong>✨ Exploratory Data Analysis | SWYNEX Internship Project ✨</strong>\n",
-    "</p>"
-   ]
-  },
-  {
-   "cell_type": "code",
-   "execution_count": null,
-   "id": "3a17a832-13dc-4f4f-b61e-e18813de6908",
-   "metadata": {},
-   "outputs": [],
-   "source": []
-  }
- ],
- "metadata": {
-  "kernelspec": {
-   "display_name": "Python 3 (ipykernel)",
-   "language": "python",
-   "name": "python3"
-  },
-  "language_info": {
-   "codemirror_mode": {
-    "name": "ipython",
-    "version": 3
-   },
-   "file_extension": ".py",
-   "mimetype": "text/x-python",
-   "name": "python",
-   "nbconvert_exporter": "python",
-   "pygments_lexer": "ipython3",
-   "version": "3.14.3"
-  }
- },
- "nbformat": 4,
- "nbformat_minor": 5
-}
+# 🚢 Titanic Dataset – Exploratory Data Analysis (EDA)
+
+<p align="center">
+  <strong>SWYNEX Data Analytics Internship Project</strong>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-Data%20Analysis-blue?logo=python" />
+  <img src="https://img.shields.io/badge/Pandas-Data%20Analysis-150458?logo=pandas" />
+  <img src="https://img.shields.io/badge/Seaborn-Visualization-green" />
+  <img src="https://img.shields.io/badge/Project-Completed-success" />
+</p>
+
+---
+
+## 📌 Project Overview
+
+This project focuses on performing Exploratory Data Analysis (EDA) on the Titanic passenger dataset.
+
+The main objective is to explore passenger information, identify survival patterns, understand relationships between variables, and detect anomalies using Python libraries.
+
+## 🎯 Project Objectives
+
+- Understand the Titanic dataset.
+- Perform data exploration and analysis.
+- Identify missing values and anomalies.
+- Analyze passenger survival patterns.
+- Visualize relationships between different attributes.
+- Extract meaningful insights from the dataset.
+
+## 📂 Dataset Information
+
+| Details | Description |
+|---|---|
+| Dataset | Titanic Dataset |
+| Total Records | 891 passengers |
+| Total Columns | 13 |
+| Target Variable | Survived |
+| Dataset File | titanic_cleaned.csv |
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|---|---|
+| Python | Programming |
+| Pandas | Data manipulation and analysis |
+| NumPy | Numerical operations |
+| Matplotlib | Data visualization |
+| Seaborn | Statistical visualization |
+| Jupyter Notebook | Development environment |
+
+## 📊 Data Visualizations
+
+The following visualizations were created to understand passenger survival patterns.
+
+### 1. Survival Analysis
+![Survival](images/1_survival.png)
+
+### 2. Gender-Based Survival
+![Gender](images/2_gender.png)
+
+### 3. Passenger Class Analysis
+![Class](images/3_class.png)
+
+### 4. Age Distribution
+![Age](images/4_age.png)
+
+### 5. Fare Outlier Detection
+![Fare](images/5_fare_outliers.png)
+
+### 6. Correlation Heatmap
+![Heatmap](images/6_heatmap.png)
+
+### 7. Family Size Analysis
+![Family](images/7_family.png)
+
+## 🔍 Key Insights
+
+| Factor | Key Finding |
+|---|---|
+| Passenger Class | First class: 63.0%, Second class: 47.3%, Third class: 24.2% survival |
+| Gender | Women: 74.2%, Men: 18.9% survival |
+| Family Size | Families of 2–4 had better survival rates |
+| Fare | 116 high-fare outliers were identified |
+| Age | Young children showed better survival chances |
+| Correlation | Survival correlated negatively with Pclass (-0.34) and positively with Fare (+0.26) |
+
+### 💡 Important Findings
+
+- Gender was one of the strongest factors associated with survival.
+- First-class passengers had better survival chances than third-class passengers.
+- Passengers travelling in small families generally had better survival rates.
+- Fare distribution contained extreme high-value outliers.
+- Children showed better survival chances than many adult age groups.
+
+## 💡 Conclusion
+
+The analysis reveals that gender, passenger class, age, family size, and ticket fare were important factors associated with Titanic passenger survival.
+
+Data visualization helped identify meaningful patterns, relationships, and anomalies in the dataset.
+
+This project provided practical experience in Python programming, data cleaning, exploratory data analysis, and data visualization.
+
+## ▶️ How to Run the Project
+
+**Step 1: Install the required libraries**
+
+```bash
+py -m pip install pandas numpy matplotlib seaborn notebook
+```
+
+**Step 2: Open the project folder**
+
+Navigate to the downloaded project folder.
+
+**Step 3: Launch Jupyter Notebook**
+
+```bash
+jupyter notebook
+```
+
+**Step 4: Run the notebook**
+
+Open `eda.ipynb` and execute all cells.
+
+## 📁 Project Structure
+
+```text
+SWYNEX-Exploratory-Data-Analysis/
+│
+├── README.md
+├── eda.ipynb
+│
+├── data/
+│   └── titanic_cleaned.csv
+│
+└── images/
+    ├── 1_survival.png
+    ├── 2_gender.png
+    ├── 3_class.png
+    ├── 4_age.png
+    ├── 5_fare_outliers.png
+    ├── 6_heatmap.png
+    └── 7_family.png
+```
+
+## 👩‍💻 Project Information
+
+**Project:** Titanic Exploratory Data Analysis
+
+**Organization:** SWYNEX
+
+**Domain:** Data Analytics
+
+**Tools:** Python, Pandas, NumPy, Matplotlib, Seaborn, Jupyter Notebook
+
+---
+
+<p align="center">
+  <strong>✨ Turning Data into Meaningful Insights! ✨</strong>
+</p>
